@@ -23,10 +23,10 @@
             <div class=" p-0 text-truncate"> {{updatedOrder.status}} </div>
             <div class=" text-truncate p-0">
                 <input type='text'  class="w-80"  [ngClass]="isEditOrder==false ?'inputClassHide ':'inputClassShow'"
-                    [disabled]='!isEditOrder' [(ngModel)]="updatedOrder.size">
+                    [disabled]='!isEditOrder' [(ngModel)]="updatedOrder.qty">
 
             </div>
-            <div class=" text-truncate p-0 mt-2">
+            <div class=" text-truncate p-0 ">
                 <input type='text'  class="w-80"  [ngClass]="isEditOrder==false ?'inputClassHide ':'inputClassShow'"
                     [disabled]='!isEditOrder' [(ngModel)]="updatedOrder.size">
 
