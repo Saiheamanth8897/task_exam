@@ -14,19 +14,19 @@
     <div class="col-md-6">
         <div class="text-truncate"> Item Name:</div>
         <div class="text-truncate">Status:</div>
-        <div class="text-truncate">Quantity:</div>
-        <div class="  text-truncate">Size:</div>
+        <div class="text-truncate mt-2">Quantity:</div>
+        <div class="  text-truncate mt-2">Size:</div>
     </div>
     <div class="col-md-6">
         <div class=" text-truncate p-0">
             <div class="p-0">{{updatedOrder.itemName}}</div>
             <div class=" p-0 text-truncate"> {{updatedOrder.status}} </div>
-            <div class=" text-truncate p-0">
+            <div class=" text-truncate p-0 mt-2">
                 <input type='text'  class="w-80"  [ngClass]="isEditOrder==false ?'inputClassHide ':'inputClassShow'"
                     [disabled]='!isEditOrder' [(ngModel)]="updatedOrder.qty">
 
             </div>
-            <div class=" text-truncate p-0 ">
+            <div class=" text-truncate p-0 mt-2">
                 <input type='text'  class="w-80"  [ngClass]="isEditOrder==false ?'inputClassHide ':'inputClassShow'"
                     [disabled]='!isEditOrder' [(ngModel)]="updatedOrder.size">
 
