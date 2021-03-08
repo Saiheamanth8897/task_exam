@@ -1,0 +1,30 @@
+
+<div class="row pageHeight ml-2" >
+    <div class = "pl-0" [ngClass]="isView==false ? 'col-md-12 col-sm-12' : 'col-md-8 col-sm-8' ">
+<table class='text-center col-md-12 mt-3'>
+    <thead class='border rounded border-secondary'>
+        <tr>
+            <th class='border rounded border-secondary'>Sno</th>
+            <th class='border rounded border-secondary'>Item Name</th>
+            <th class='border rounded border-secondary'>Qty</th>
+            <th class='border rounded border-secondary'>Order Status</th>
+            <th class='border rounded border-secondary'>View Details</th>
+        </tr>
+    </thead>    
+    <tbody class='text-center mt-3 '*ngFor='let itemDetails of orderList ;let i = index'>
+        <tr>
+            <td class='border rounded border-secondary'>{{itemDetails.id}}</td>
+            <td class='border rounded border-secondary'>{{itemDetails.itemName}}</td>
+            <td class='border rounded border-secondary'>{{itemDetails.qty}}</td>
+            <td class='border rounded border-secondary'>{{itemDetails.status}}</td>
+            <td class='border rounded border-secondary'><button type='select' 
+                [disabled]="isView==true && i !== selectedIdx"
+                 class='btn btn-primary'(click)='viewData(i)'>View</button></td>
+        </tr>
+    </tbody>
+</table>
+    </div>
+    <div *ngIf='isView==true ' class="col-md-4 col-sm-4 p-0 border">
+<app-order-details [selectedOrder]='selectedData' [selectedIdx] = "selectedIdx" (isViewClosed)='isViewClosed($event)'(savedData) = "saveData($event)"></app-order-details>
+    </div>
+</div>

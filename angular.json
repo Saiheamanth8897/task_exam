@@ -25,7 +25,8 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "../node_modules/font-awesome/css/font-awesome.css"
             ],
             "styles": [
               "src/styles.scss"
@@ -123,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "my-shopping-list"
+    }
+  },
+  "defaultProject": "my-shopping-list",
+  "cli": {
+    "analytics": "946697d9-47dd-4eec-9d3c-629fa3692dbc"
+  }
 }
